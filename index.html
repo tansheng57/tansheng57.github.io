@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8" />
-  <meta name="google-site-verification" content="google4cec79095f42be28" />
+  <meta name="google-site-verification" content="google4cec79095f42be28"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sheng Tan | 谭 盛</title>
 
@@ -79,38 +79,47 @@
       color: var(--link);
     }
 
-    .hero {
+    .about-grid {
       display: grid;
-      grid-template-columns: 2.2fr 1fr;
-      gap: 40px;
-      margin-bottom: 42px;
+      grid-template-columns: 130px 1fr;
+      gap: 28px;
+      align-items: start;
     }
 
-    .hero h2 {
-      font-size: 1.15rem;
-      margin: 0 0 14px;
-      font-weight: 600;
+    .profile-photo {
+      width: 130px;
+      max-width: 130px;
+      height: auto;
+      display: block;
     }
 
-    .hero p {
-      margin: 0 0 14px;
-    }
-
-    .sidebar {
-      font-size: 0.98rem;
-      padding-left: 22px;
-      border-left: 1px solid var(--border);
-    }
-
-    .sidebar h3 {
+    .about-text p {
       margin-top: 0;
-      margin-bottom: 10px;
-      font-size: 1.02rem;
-      font-weight: 600;
     }
 
-    .sidebar p {
-      margin: 0 0 10px;
+    .contact-line {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px 14px;
+      margin-top: 16px;
+      color: var(--muted);
+      font-size: 0.96rem;
+    }
+
+    .contact-line span,
+    .contact-line a {
+      white-space: nowrap;
+    }
+
+    .research-list,
+    .teaching-list {
+      margin: 0;
+      padding-left: 22px;
+    }
+
+    .research-list li,
+    .teaching-list li {
+      margin-bottom: 6px;
     }
 
     section {
@@ -139,12 +148,6 @@
       font-size: 0.95rem;
     }
 
-    .two-col {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 36px;
-    }
-
     footer {
       border-top: 1px solid var(--border);
       padding-top: 18px;
@@ -160,16 +163,13 @@
     }
 
     @media (max-width: 800px) {
-      .hero,
-      .two-col {
+      .about-grid {
         grid-template-columns: 1fr;
       }
 
-      .sidebar {
-        border-left: none;
-        padding-left: 0;
-        border-top: 1px solid var(--border);
-        padding-top: 18px;
+      .profile-photo {
+        width: 120px;
+        max-width: 120px;
       }
 
       .topnav a {
@@ -182,6 +182,7 @@
 
 <body>
   <div class="container">
+
     <header>
       <div class="topbar">
         <h1 class="site-title">Sheng Tan | 谭 盛</h1>
@@ -196,30 +197,57 @@
       </div>
     </header>
 
-    <section id="about">
+    <main>
+
+      <section id="about">
         <h2>About</h2>
+
         <div class="about-grid">
-          <img class="profile-photo" src="profile.jpg" alt="Sheng Tan">
-      
+
+          <img
+            class="profile-photo"
+            src="profile.jpg"
+            alt="Sheng Tan"
+            style="width:130px; max-width:130px; height:auto;"
+          >
+
           <div class="about-text">
+
             <p>
-              I am a lecturer at Capital Normal University. Prior to my current position,
-              I was a postdoc at the Beijing Institute of Mathematical Sciences and Applications (BIMSA).
+              I am a lecturer at Capital Normal University.
+              Prior to my current position, I was a postdoc at the
+              Beijing Institute of Mathematical Sciences and Applications (BIMSA).
               I received my PhD in Mathematics from Purdue University in May 2023.
             </p>
-      
+
             <div class="contact-line">
-              <span><strong>Email:</strong> cobordismatoutlookdotcom</span>
-              <span><strong>Affiliation:</strong> Capital Normal University</span>
-              <a href="CV.pdf" target="_blank" rel="noopener noreferrer">CV</a>
-              <a href="http://arxiv.org/a/tan_s_2" target="_blank" rel="noopener noreferrer">arXiv</a>
+              <span>
+                <strong>Email:</strong>
+                cobordismatoutlookdotcom
+              </span>
+
+              <span>
+                <strong>Affiliation:</strong>
+                Capital Normal University
+              </span>
+
+              <a href="CV.pdf" target="_blank" rel="noopener noreferrer">
+                CV
+              </a>
+
+              <a href="http://arxiv.org/a/tan_s_2" target="_blank" rel="noopener noreferrer">
+                arXiv
+              </a>
             </div>
+
           </div>
         </div>
       </section>
 
+
       <section id="research">
         <h2>Research</h2>
+
         <ul class="research-list">
           <li>Topological quantum field theory</li>
           <li>Tensor categories</li>
@@ -228,119 +256,222 @@
           <li>Algebraic geometry</li>
         </ul>
       </section>
-    
+
+
       <section id="publications">
         <h2>Publications</h2>
 
         <ol class="pub-list">
+
           <li>
             Zhian Jia and <strong>Sheng Tan</strong>,
             Weak Hopf tube algebra for domain walls between 2d gapped phases of Turaev-Viro TQFTs,
             <em>JHEP</em> <strong>11</strong> (2025), 018.
-            <a href="https://arxiv.org/abs/2507.01515" target="_blank" rel="noopener noreferrer">[arXiv]</a>
+            <a href="https://arxiv.org/abs/2507.01515" target="_blank" rel="noopener noreferrer">
+              [arXiv]
+            </a>
           </li>
 
           <li>
             Lu Wei, Zhian Jia, Dagomir Kaszlikowski, and <strong>Sheng Tan</strong>,
             Antilinear superoperator and quantum geometric invariance for higher dimensional quantum systems,
             <em>Quant. Inf. Proc.</em> <strong>23</strong> (2024), 290.
-            <a href="https://arxiv.org/abs/2202.10989" target="_blank" rel="noopener noreferrer">[arXiv]</a>
+            <a href="https://arxiv.org/abs/2202.10989" target="_blank" rel="noopener noreferrer">
+              [arXiv]
+            </a>
           </li>
 
           <li>
             Zhian Jia, <strong>Sheng Tan</strong>, and Dagomir Kaszlikowski,
             Weak Hopf symmetry and tube algebra of the generalized multifusion string-net model,
             <em>JHEP</em> <strong>07</strong> (2024), 207.
-            <a href="https://arxiv.org/abs/2403.04446" target="_blank" rel="noopener noreferrer">[arXiv]</a>
+            <a href="https://arxiv.org/abs/2403.04446" target="_blank" rel="noopener noreferrer">
+              [arXiv]
+            </a>
           </li>
 
           <li>
             Zhian Jia, Dagomir Kaszlikowski, and <strong>Sheng Tan</strong>,
             Electric-magnetic duality and Z2 symmetry enriched Abelian lattice gauge theory,
             <em>J. Phys. A</em> <strong>57</strong> (2024), 255203.
-            <a href="https://arxiv.org/abs/2201.12361" target="_blank" rel="noopener noreferrer">[arXiv]</a>
+            <a href="https://arxiv.org/abs/2201.12361" target="_blank" rel="noopener noreferrer">
+              [arXiv]
+            </a>
           </li>
 
           <li>
             Zhian Jia, <strong>Sheng Tan</strong>, Dagomir Kaszlikowski, and Liang Chang,
             On weak Hopf symmetry and weak Hopf quantum double model,
             <em>Comm. Math. Phys.</em> <strong>402</strong> (2023), 3045–3107.
-            <a href="https://arxiv.org/abs/2302.08131" target="_blank" rel="noopener noreferrer">[arXiv]</a>
+            <a href="https://arxiv.org/abs/2302.08131" target="_blank" rel="noopener noreferrer">
+              [arXiv]
+            </a>
           </li>
 
           <li>
             Zhian Jia, Dagomir Kaszlikowski, and <strong>Sheng Tan</strong>,
             Boundary and domain wall theories of 2d generalized quantum double model,
             <em>JHEP</em> <strong>07</strong> (2023), 160.
-            <a href="https://arxiv.org/abs/2207.03970" target="_blank" rel="noopener noreferrer">[arXiv]</a>
+            <a href="https://arxiv.org/abs/2207.03970" target="_blank" rel="noopener noreferrer">
+              [arXiv]
+            </a>
           </li>
+
         </ol>
       </section>
+
 
       <section id="preprints">
         <h2>Preprints</h2>
 
         <ol class="pub-list">
+
           <li>
             Shiyu Cao, Zhian Jia, and <strong>Sheng Tan</strong>,
             Topological quantum color code model on infinite lattice,
             preprint (2026).
-            <a href="https://arxiv.org/abs/2601.12409" target="_blank" rel="noopener noreferrer">[arXiv]</a>
+            <a href="https://arxiv.org/abs/2601.12409" target="_blank" rel="noopener noreferrer">
+              [arXiv]
+            </a>
           </li>
+
         </ol>
       </section>
 
+
       <section id="teaching">
         <h2>Teaching</h2>
+
         <ul class="teaching-list">
-          <li><strong>Fall 2026:</strong> Advanced Mathematics A1.</li>
+          <li>
+            <strong>Fall 2026:</strong>
+            Advanced Mathematics A1.
+          </li>
         </ul>
       </section>
+
 
       <section id="links">
         <h2>Links</h2>
 
-        <div style="display:flex; justify-content:space-between; align-items:flex-start; gap:40px; flex-wrap:wrap;">
+        <div
+          style="
+            display:flex;
+            justify-content:space-between;
+            align-items:flex-start;
+            gap:40px;
+            flex-wrap:wrap;
+          "
+        >
 
-          <!-- 左栏：Links -->
           <div style="flex:1; min-width:220px;">
+
             <ul style="margin-top:0;">
-              <li><a href="http://arxiv.org/a/tan_s_2" target="_blank" rel="noopener noreferrer">arXiv author page</a></li>
-              <li><a href="https://math.cnu.edu.cn" target="_blank" rel="noopener noreferrer">CNU Math</a></li>
-              <li><a href="https://www.bimsa.cn/" target="_blank" rel="noopener noreferrer">BIMSA</a></li>
-              <li><a href="https://polyidoit.github.io/jia/index.html" target="_blank" rel="noopener noreferrer">Zhian Jia</a></li>
-              <li><a href="https://clementdelcamp.com/digest" target="_blank" rel="noopener noreferrer">TQFT Digest</a></li>
+
+              <li>
+                <a
+                  href="http://arxiv.org/a/tan_s_2"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  arXiv author page
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href="https://math.cnu.edu.cn"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  CNU Math
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href="https://www.bimsa.cn/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  BIMSA
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href="https://polyidoit.github.io/jia/index.html"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Zhian Jia
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href="https://clementdelcamp.com/digest"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  TQFT Digest
+                </a>
+              </li>
+
             </ul>
 
-            <p class="slogan" style="margin-top:20px; color:#666;">
+            <p
+              class="slogan"
+              style="margin-top:20px; color:#666;"
+            >
               The days are long but the years are short.
             </p>
+
           </div>
 
-          <!-- 右栏：Flag counter -->
-          <div style="width:260px; text-align:left; border-left:1px solid #ddd; padding-left:20px;">
-            <a href="https://info.flagcounter.com/CUMF" target="_blank" rel="noopener noreferrer">
-              <img src="https://s11.flagcounter.com/count2/CUMF/bg_FFFFFF/txt_000000/border_CCCCCC/columns_3/maxflags_12/viewers_0/labels_0/pageviews_1/flags_0/percent_0/"
-                   alt="Flag Counter">
+
+          <div
+            style="
+              width:260px;
+              text-align:left;
+              border-left:1px solid #ddd;
+              padding-left:20px;
+            "
+          >
+
+            <a
+              href="https://info.flagcounter.com/CUMF"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src="https://s11.flagcounter.com/count2/CUMF/bg_FFFFFF/txt_000000/border_CCCCCC/columns_3/maxflags_12/viewers_0/labels_0/pageviews_1/flags_0/percent_0/"
+                alt="Flag Counter"
+              >
             </a>
+
           </div>
 
         </div>
       </section>
 
+
       <p class="last-update">
-        © <span id="year"></span> Sheng Tan · Last updated: <span id="last-update"></span>
+        © <span id="year"></span> Sheng Tan ·
+        Last updated: <span id="last-update"></span>
       </p>
 
-      <script>
-        // 自动年份
-        document.getElementById("year").textContent = new Date().getFullYear();
 
-        // 获取页面最后修改时间
+      <script>
+        document.getElementById("year").textContent =
+          new Date().getFullYear();
+
         const d = new Date(document.lastModified);
 
         function getOrdinal(n) {
-          if (n % 100 >= 11 && n % 100 <= 13) return n + "th";
+          if (n % 100 >= 11 && n % 100 <= 13) {
+            return n + "th";
+          }
 
           switch (n % 10) {
             case 1:
@@ -355,13 +486,18 @@
         }
 
         const day = getOrdinal(d.getDate());
-        const month = d.toLocaleString("en-US", { month: "long" });
+        const month = d.toLocaleString(
+          "en-US",
+          { month: "long" }
+        );
         const year = d.getFullYear();
 
         document.getElementById("last-update").textContent =
           `${day} ${month} ${year}`;
       </script>
+
     </main>
+
   </div>
 </body>
 
